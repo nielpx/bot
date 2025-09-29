@@ -6,6 +6,11 @@ const { createCanvas, registerFont, loadImage } = require("canvas");
 const fs = require("fs");
 const sharp = require("sharp");
 const twemoji = require("twemoji");
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => res.send("Bot is running!"));
+app.listen(3000, () => console.log("🌐 HTTP server running on port 3000"));
 
 // Gunakan fetch bawaan Node.js v18+, atau node-fetch jika tersedia
 let fetchFn;
